@@ -15,7 +15,7 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX'); // Replace with your Google Analytics ID
+        gtag('config', 'UA-XXXXXX-X'); // Replace with your Google Analytics ID
     </script>
     
     <!-- Matomo Analytics -->
@@ -52,25 +52,6 @@
 </head>
 <body>
     <h1>Analytics Dashboard</h1>
-    <p>This website is tracking analytics using Google Analytics, Firebase, Matomo, Plausible, and Countly.</p>
-    
-    <!-- Firebase Analytics -->
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-analytics.js";
-        
-        const firebaseConfig = {
-            apiKey: "AIzaSyAVQPbm_1uoJuT8NDIw0CgRIo75_pTcDJ0",
-            authDomain: "fir-1-60c18.firebaseapp.com",
-            projectId: "fir-1-60c18",
-            storageBucket: "fir-1-60c18.firebasestorage.app",
-            messagingSenderId: "63753566587",
-            appId: "1:63753566587:web:2626b7d52c85bc3592a5de",
-            measurementId: "G-ZHKWDCL728"
-        };
-        
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-    </script>
+    <p>This website is tracking analytics using Google Analytics, Matomo, Plausible, and Countly.</p>
 </body>
 </html>
