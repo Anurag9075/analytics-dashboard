@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        h1 { color: #333; }
+    </style>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXX-X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-XXXXXX-X'); // Replace with your Google Analytics ID
+    </script>
+    
+    <!-- Matomo Analytics -->
+    <script>
+        var _paq = window._paq = window._paq || [];
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="https://your-matomo-url/";
+            _paq.push(['setTrackerUrl', u+'matomo.php']);
+            _paq.push(['setSiteId', '1']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+    
+    <!-- Plausible Analytics -->
+    <script defer data-domain="yourwebsite.com" src="https://plausible.io/js/plausible.js"></script>
+    
+    <!-- Countly Analytics -->
+    <script>
+        (function() {
+            var cly = document.createElement('script');
+            cly.type = 'text/javascript'; 
+            cly.async = true;
+            cly.src = 'https://cdn.jsdelivr.net/npm/countly-sdk-web/lib/countly.min.js';
+            cly.onload = function() {
+                Countly.init({ app_key: 'YOUR_APP_KEY', url: 'https://your-countly-url/' });
+                Countly.track_sessions();
+            };
+            document.getElementsByTagName('head')[0].appendChild(cly);
+        })();
+    </script>
+</head>
+<body>
+    <h1>Analytics Dashboard</h1>
+    <p>This website is tracking analytics using Google Analytics, Firebase, Matomo, Plausible, and Countly.</p>
+    
+    <!-- Firebase Analytics -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-analytics.js";
+        
+        const firebaseConfig = {
+            apiKey: "AIzaSyAVQPbm_1uoJuT8NDIw0CgRIo75_pTcDJ0",
+            authDomain: "fir-1-60c18.firebaseapp.com",
+            projectId: "fir-1-60c18",
+            storageBucket: "fir-1-60c18.firebasestorage.app",
+            messagingSenderId: "63753566587",
+            appId: "1:63753566587:web:2626b7d52c85bc3592a5de",
+            measurementId: "G-ZHKWDCL728"
+        };
+        
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+</body>
+</html>
