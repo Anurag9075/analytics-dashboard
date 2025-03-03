@@ -17,39 +17,6 @@
     gtag('js', new Date());
     gtag('config', 'G-ZHKWDCL728'); // Your actual GA4 Measurement ID
 </script>
-
-    
-    <!-- Matomo Analytics -->
-    <script>
-        var _paq = window._paq = window._paq || [];
-        _paq.push(['trackPageView']);
-        _paq.push(['enableLinkTracking']);
-        (function() {
-            var u="https://your-matomo-url/";
-            _paq.push(['setTrackerUrl', u+'matomo.php']);
-            _paq.push(['setSiteId', '1']);
-            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-            g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-        })();
-    </script>
-    
-    <!-- Plausible Analytics -->
-    <script defer data-domain="yourwebsite.com" src="https://plausible.io/js/plausible.js"></script>
-    
-    <!-- Countly Analytics -->
-    <script>
-        (function() {
-            var cly = document.createElement('script');
-            cly.type = 'text/javascript'; 
-            cly.async = true;
-            cly.src = 'https://cdn.jsdelivr.net/npm/countly-sdk-web/lib/countly.min.js';
-            cly.onload = function() {
-                Countly.init({ app_key: 'YOUR_APP_KEY', url: 'https://your-countly-url/' });
-                Countly.track_sessions();
-            };
-            document.getElementsByTagName('head')[0].appendChild(cly);
-        })();
-    </script>
 </head>
 <body>
     <h1>Analytics Dashboard</h1>
